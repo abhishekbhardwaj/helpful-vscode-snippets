@@ -18,3 +18,7 @@ export type TypescriptReactExampleProps = {
 
 export default TypescriptReactExample
 ```
+
+2. Import an external module
+
+Insert with `imp`.

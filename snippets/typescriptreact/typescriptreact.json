@@ -14,5 +14,12 @@
             "export default ${1:${TM_FILENAME_BASE}}",
             ""
         ]
+    },
+    "import": {
+        "prefix": "imp",
+        "description": "Import an external module",
+        "body": [
+            "import { $2 } from '$1';"
+        ]
     }
 }

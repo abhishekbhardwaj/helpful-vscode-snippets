@@ -1,0 +1,9 @@
+{
+    "import": {
+        "prefix": "imp",
+        "description": "Import an external module",
+        "body": [
+            "import { $2 } from '$1';"
+        ]
+    }
+}
