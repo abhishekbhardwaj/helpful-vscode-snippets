@@ -21,5 +21,34 @@
         "body": [
             "import { $2 } from '$1';"
         ]
+    },
+    "newcontext": {
+        "prefix": "newcontext",
+        "description": "Insert a new React Context",
+        "body": [
+            "import { createContext, useContext } from 'react'",
+            "",
+            "type ${1}ContextType = {};",
+            "",
+            "const ${1}Context = createContext<${1}ContextType>({} as ${1}ContextType)",
+            "",
+            "export const use${1}Context = () => {",
+            "\tconst context = useContext(${1}Context);",
+            "",
+            "\tif(context === undefined) {",
+            "\t\tthrow new Error('use${1}Context must be used within a ${1}Context.Provider');",
+            "\t}",
+            "",
+            "\treturn context;",
+            "};",
+            "",
+            "export {",
+            "\t${1}ContextType,",
+            "\t${1}Context",
+            "}",
+            "",
+            "export default ${1}Context;",
+            ""
+        ]
     }
 }
